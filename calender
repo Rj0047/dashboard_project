@@ -1,0 +1,19 @@
+import calendar
+
+def show_calendar():
+    print("📅 Welcome to the Python Calendar Program!")
+    
+    try:
+        year = int(input("Enter year (e.g., 2025): "))
+        month = int(input("Enter month (1-12): "))
+
+        if 1 <= month <= 12:
+            print("\nHere is the calendar:\n")
+            print(calendar.month(year, month))
+        else:
+            print("Month must be between 1 and 12.")
+    except ValueError:
+        print("Please enter valid numeric values for year and month.")
+
+if __name__ == "__main__":
+    show_calendar()
